@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>おいしい暮らし - 週間献立プランナー</title>
+  <meta name="description" content="栄養バランスと調理効率を考えた献立を自動生成。在庫食材を優先活用し、買い物リストも自動作成。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header class="header" id="header">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">🍳</span>
+          <h1>おいしい暮らし</h1>
+          <p class="subtitle">週間献立プランナー</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="tab-nav" id="tab-nav">
+      <button class="tab-btn active" data-tab="menu" id="tab-menu">
+        <span class="tab-icon">🗓️</span>
+        <span class="tab-label">献立</span>
+      </button>
+      <button class="tab-btn" data-tab="pantry" id="tab-pantry">
+        <span class="tab-icon">🏠</span>
+        <span class="tab-label">在庫</span>
+      </button>
+      <button class="tab-btn" data-tab="shopping" id="tab-shopping">
+        <span class="tab-icon">🛒</span>
+        <span class="tab-label">買い物</span>
+      </button>
+      <button class="tab-btn" data-tab="myrecipe" id="tab-myrecipe">
+        <span class="tab-icon">📝</span>
+        <span class="tab-label">マイレシピ</span>
+      </button>
+      <button class="tab-btn" data-tab="concierge" id="tab-concierge">
+        <span class="tab-icon">💬</span>
+        <span class="tab-label">相談</span>
+      </button>
+    </nav>
+
+    <!-- Content Area -->
+    <main class="content" id="content">
+      <!-- Menu Tab -->
+      <section class="tab-content active" id="content-menu"></section>
+      <!-- Pantry Tab -->
+      <section class="tab-content" id="content-pantry"></section>
+      <!-- Shopping Tab -->
+      <section class="tab-content" id="content-shopping"></section>
+      <!-- My Recipe Tab -->
+      <section class="tab-content" id="content-myrecipe"></section>
+      <!-- AI Concierge Tab -->
+      <section class="tab-content" id="content-concierge"></section>
+    </main>
+
+    <!-- Recipe Detail Modal -->
+    <div class="modal-overlay" id="modal-overlay">
+      <div class="modal" id="modal">
+        <button class="modal-close" id="modal-close">✕</button>
+        <div class="modal-body" id="modal-body"></div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
